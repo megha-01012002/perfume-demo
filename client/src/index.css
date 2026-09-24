@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory text-charcoal font-body antialiased;
+}
+
+::selection {
+  background: #c8a96b;
+  color: #1a070b;
+}
+
+/* Elegant thin scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f4ed;
+}
+::-webkit-scrollbar-thumb {
+  background: #d9c9ab;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c8a96b;
+}
+
+.container-lux {
+  @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+}
+
+.eyebrow {
+  @apply text-[11px] sm:text-xs uppercase tracking-widest2 text-gold-dark font-medium;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-burgundy text-ivory px-7 py-3.5 text-xs uppercase tracking-widest2 font-medium transition-all duration-300 ease-lux hover:bg-burgundy-dark disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 border border-charcoal/70 text-charcoal px-7 py-3.5 text-xs uppercase tracking-widest2 font-medium transition-all duration-300 ease-lux hover:border-charcoal hover:bg-charcoal hover:text-ivory;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center gap-2 bg-gold text-burgundy-dark px-7 py-3.5 text-xs uppercase tracking-widest2 font-semibold transition-all duration-300 ease-lux hover:bg-gold-dark hover:text-ivory disabled:opacity-50;
+}
+
+.input-lux {
+  @apply w-full border border-charcoal/20 bg-transparent px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold transition-colors;
+}
+
+.section-heading {
+  @apply font-display text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-burgundy-dark;
+}
+
+.skeleton {
+  @apply relative overflow-hidden bg-beige/70;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
