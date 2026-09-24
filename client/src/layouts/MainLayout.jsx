@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CartDrawer from "../components/CartDrawer";
-import NewsletterPopup from "../components/NewsletterPopup";
+// import NewsletterPopup from "../components/NewsletterPopup";
 import CookieConsent from "../components/CookieConsent";
 
 export default function MainLayout() {
@@ -21,7 +21,7 @@ export default function MainLayout() {
       </main>
       <Footer />
       <CartDrawer />
-      <NewsletterPopup />
+      {/* <NewsletterPopup /> */}
       <CookieConsent />
     </div>
   );
